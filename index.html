@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="./Assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./assets/fontawesome-free-6.1.2-web/css/all.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
 </head>
 <body>
+  <script src="index.js"></script>
 <!-- aqui inicia el menu -->
     <header>
       <nav class="navbar">
-        <a class="navbar-brand" href="#" >
+        <a class="navbar-brand" href="#" id="Pinter" >
           <i class="fa-brands fa-pinterest fa-xl" id="pIcon">
             <strong class="Pint">Pinterest </strong> 
           </i>
@@ -22,40 +25,192 @@
             <button type="button" class="btn" id="B1"> <strong>información</strong></button>
             <button type="button" class="btn" id="B1"> <strong>Empresa</strong></button>
             <button type="button" class="btn" id="B1"> <strong>Blog</strong></button>
-            <button type="button" class="btn" id="B2"> <strong>Iniciar sesión</strong></button>
-            <button type="button" class="btn" id="B3"> <strong>Registrate</strong></button>
+            <a role="button" href="#ancla-2" type="button" class="btn" id="B2"> <strong>Iniciar sesión</strong></a>
+            <a role="button" href="#ancla-2" type="button" class="btn" id="B3"> <strong>Registrate</strong></a>
          </div>
       </nav>
     </header>
     <!--pagina de inicio -->
-    <article class="Pagina1">
-      <section class="container-fluid d-flex flex-column justify-content-end " style="height: 320px; width: 100%;">
-        <div class=" text-center "> 
+    <a name="ancla-3"></a>
+    <div class="fondo"></div>
+    <article  class="Pagina1" id="page1">
+      <section class="titulo">
+        <div class=" text-center"> 
           <h1 class="T1">Encuentra la próxima</h1>
-        <div  class=" text-center "></div>
-          <h1 class="T2">idea de ropa de verano</h1> 
+        <div  class=" text-center " ></div>
+          <h1 class="T2" id="Title2">idea de ropa de verano</h1> 
       </section>
       <section class="minibot"> 
-        <button type="button" class="btn m-1" id="B4"></button>
-        <button type="button" class="btn m-1"></button>
-        <button type="button" class="btn m-1"></button>
-        <button type="button" class="btn m-1"></button>
+        <button type="button" class="btn m-1" id="B4" onclick="window.location.reload()"></button>
+        <button type="button" class="btn m-1" id="Bv1" onclick="cambio1();changetext()"></button>
+        <button type="button" class="btn m-1" onclick="cambio2()"></button>
+        <button type="button" class="btn m-1" onclick="cambio3()"></button>
       </section>
       <section class="Banim">
-        <button type="button" class="btn m-1">
+        <a role="button" href="#ancla-1" id="green">
           <span class="fa-stack fa-2x">
-            <i id="BaB" class="fa-solid fa-circle fa-bounce fa-stack-2x "></i>
-            <i id="BaF" class="fa-solid fa-angle-down fa-xl fa-bounce fa-stack-1x "></i>  
+            <i id="BaB" class="fa-solid fa-circle fa-lg fa-bounce fa-stack-lg"></i>
+            <i id="BaF" class="fa-solid fa-angle-down fa-sm fa-bounce fa-stack-1x "></i>  
           </span>
-        </button>
+        </a>
       </section> 
+      <footer class=" column  d-flex justify-content-center  ">
+        Aquí te mostramos cómo funciona <b><i class="fa-solid fa-angle-down fa-md"></i>   </b> 
+       </footer>  
     </article>
-  <footer class=" column d-none d-sm-flex justify-content-center  align-items-center ">
-   Aquí te mostramos cómo funciona <i class="fa-solid fa-angle-down fa-lg"></i>   
-  </footer> 
- <!--  aqui inicia la parte 2 (la amarilla) -->
- <article class="pagina2">
- </article>
+    <!--  aqui inicia la parte 2 (la amarilla) -->
+    <a name="ancla-1"></a>
+    <article class="Page2">
+      <section class="page2L">
+        <a href="https://www.pinterest.com.mx/search/pins/?q=easy%20chicken%20dinner">
+        <i class="fa-solid fa-magnifying-glass fa-xl" id="mg"></i>
+        <input type="text" class="cena" placeholder= "cena fácil con pollo"> 
+        <img class="p1" src="./assets/img/pollo1.jfif" alt="pollo_con_arroz">
+        <img class="p2" src="./assets/img/pollo2.jfif" alt="pollo_en_crema">
+        <img class="p3" src="./assets/img/pollo3.jfif" alt="Bowl_de_pollo">
+        <img class="p4" src="./assets/img/pollo4.jfif" alt="Pollo_al_orange">
+      </a>
+      </section>
+      <section class="page2R">
+        <h2> Busca una idea</h2>
+        <p> ¿Qué quieres probar ahora? Piensa <br> en algo que te guste, como "cena <br>  fácil con pollo", y mira lo que <br> encuentras.</p>
+        <a href="https://www.pinterest.com.mx/ideas/food-and-drink/918530398158/">
+        <button type="button" class=" btn" id="B5"> Explorar</button></a>
+      </section>
+    </article>
+   <!--  aqui inicia la parte 3 (la azul) -->
+   <article class="Pagina3">
+      <section class="page3L">
+        <h2>Guarda las ideas que te gusten</h2>
+        <p>Recopila tus favoritos para volver a <br> verlos después.</p>
+        <a href="https://www.pinterest.com.mx/ideas/home-decor/935249274030/">
+        <button type="button" class=" btn" id="B6"> Explorar</button></a>
+      </section>
+      <section class="page3R">
+        <a href="https://www.pinterest.com.mx/search/pins/?q=fern%20future%20home%20vibes">
+          <div class="card" id="camas">
+            <div class="card-img-overlay" id="Futuro">
+              <h1>Mi futuro <br> hogar con <br> helechos</h1>
+              <img src="./assets/img/subtarjeta1.jfif" alt="">
+              <img src="./assets/img/subtarjeta2.jfif" alt="">
+              <img src="./assets/img/subtarjeta3.jfif" alt="" id="card3">
+            </div>
+          </div>
+        </a>
+        <a href="https://www.pinterest.com.mx/search/pins/?q=my%20scandinavian%20bedroom" >
+          <div class="card" id="escandinavo">
+            <div class="card-img-overlay" id="dorEsc">
+              <h1>Mi <br> dormitorio <br> escandinavo </h1>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.pinterest.com.mx/search/pins/?q=the%20deck%20of%20my%20dreams">
+          <div class="card" id="deck">
+            <div class="card-img-overlay" id="deO">
+              <h3>El deck de <br>mi sueños </h3>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.pinterest.com.mx/search/pins/?q=serve%20my%20drinks%20in%20style">
+          <div class="card" id="estilo" >
+            <div class="card-img-overlay" id="jugo">
+              <h3>Tragos con <br>estilo </h3>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.pinterest.com.mx/search/pins/?q=bathroom%20upgrade">
+          <div class="card" id="baño" >
+            <div class="card-img-overlay" id="bañot" >
+              <h3>Nuestra <br>remodelación <br> del baño </h3>
+            </div>
+          </div>
+        </a>
+      </section>
+   </article>
+  <!--  aqui inicia la parte 4 (la roza) -->
+   <article class="pagina4">
+    <a href="https://www.pinterest.com.mx/search/pins/?q=lip%20shade">
+      <section class="page4L">
+        <div class="card" id="P4">
+          <div class="card-img-overlay" id="cardP4Text" >
+            <h3>How to find the<br>perfect lip shade<br>for any occasion</h3>
+          </div>
+          <img src="./assets/img/naranja.jfif" alt="" id="P4circ">
+        </div>
+        <div class="subtext">
+          <p><b> Scout the City</b><br>56.7 mil<br>seguidores</p>
+        </div>
+      </a>
+      </section>
+    <section class="page4R">
+        <h2>Míralo, créalo,<br> pruébalo,<br> hazlo</h2>
+        <p>Lo mejor de Pinterest es descubrir <br> cosas e ideas nuevas de personas de <br>todo el mundo.</p>
+        <a href="https://www.pinterest.com.mx/ideas/beauty/935541271955/">
+        <button type="button" class=" btn" id="B7"> Explorar</button></a>
+    </section>
+   </article>
+   <!-- aqui inicia la parte 5 -->
+   <article class="pagina5">
+    <a href="#ancla-3">
+    <button type="button" class="btn" id="B11" >  <span class="fa-stack-2x">
+      <i id="BaR" class="fa-solid fa-circle fa-lg fa-stack-xl "></i>
+      <i id="Bag" class="fa-solid fa-chevron-up fa-xs fa-stack-1x "></i>
+    </button> </a>
+    <div class="subpage5">
+    <section class="page5L">
+      <h1>regístrate <br> para ver tus <br> ideas</h1>
+    </section>
+    <section class="page5R">
+      <div class="info">  
+        <i class="fa-brands fa-pinterest fa-2xl" id="pIcon"> </i>  
+        <p></p>
+          <h2> Te damos la bienvenida a <br> Pinterest</h2>  
+          <p>Encuentra nuevas ideas para <br> experimentar</p>
+          <div class="inputs">
+            <a name="ancla-2" ></a>
+            <div class="correo">
+              <label for="cor">Correo electrónico</label>
+              <input class="cor" type="text" placeholder="Correo electrónico">
+            </div>
+            <div class="contraseña">
+              <label for="contra">Contraseña</label>
+              <input class="contra" type="text" placeholder="Crea una contraseña">
+            </div>
+            <div class="edad">
+              <label for="ed">Edad</label>
+              <input class="ed" type="text" placeholder="Edad">
+            </div>   
+          </div>
+        <button type="button" class="btn" id="B8" onclick="show()"> <strong>Continuar</strong></button>
+        <p>o</p>
+        <button type="button" class="btn" id="B9" onClick="window.open('https://www.facebook.com/'),_parent, width=600,height=400,left=50,top=50"> <img src="./assets/img/facebook.PNG" alt="">Continuar con Facebook</button>
+        <button type="button" class="btn" id="B10" onClick="window.open('https://accounts.google.com/Login/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin'),_parent, width=600,height=400,left=50,top=50" > <img src="./assets/img/google.PNG" alt="">Continuar con google</button>
+        <div class="condiciones">
+        <p>Al continuar, aceptas las <a href="https://policy.pinterest.com/es/terms-of-service"><b style="color: black;">Condiciones de servicio</b></a> de <br> Pinterest y reconoces que leíste nuestra <br><a href="https://policy.pinterest.com/es/privacy-policy"> <b style="color: black;"> Política de privacidad.</b></a></b></p>
+          <P><b>¿Ya eres miembro?Iniciar sesión</b></P>
+      </div>
+      <div class="footerinfo">
+        Crea una cuenta para empresa gratuita
+      </div>
+      </div>
+    </section>
+    <section>
+    </section>
+  </div>
+  <footer class="footerpage5"> 
+    <ul>
+    <li class="cs"> Condiciones de servicio </li>
+    <li class="pv"> Politica de privacidad </li>
+    <li class="ayu"> Ayuda </li>
+    <li class="ip"> Apilicacion para iphone </li>
+    <li class="and"> Aplicacion para android </li>
+    <li class="us"> Usuarios </li>
+    <li class="col"> Colecciones </li>
+    <li class="hoy"> Hoy </li>
+    <li class="ex"> Explorar </li>
+  </ul>
+  </footer>
+    </article>
   </body>
 </html>
 

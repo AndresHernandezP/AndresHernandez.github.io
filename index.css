@@ -1,13 +1,12 @@
 body{
-    background-image: url(./assets/img/fondo.png);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: fit-content;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    list-style:none
 }
 nav{
-    padding: 10px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    position: relative;
+    margin: 20px;
+    padding: 25px;
+    font-weight: 500;
 }
 #pIcon{
     color: rgba(231, 8, 42, 255);
@@ -15,7 +14,8 @@ nav{
 .Pint{
     color: rgba(231, 8, 42, 255);
     font-size: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #B1{
     color: rgb(33, 25, 34);
@@ -30,14 +30,49 @@ nav{
     background-color: rgba(239, 239, 239, 255);
     border-radius: 150px;
 }
+@media screen and (max-width:650px){
+    #B1{
+        display: none;
+    }
+}
+/* inicio de la pagina uno */
+.fondo{
+background-image: url(./assets/img/fondo.png);
+background-position: center;
+background-repeat: no-repeat;
+width: 100%;
+height: 1100px;
+animation:slideInUp; 
+animation-duration: 6s;
+animation-iteration-count: infinite;
+position: absolute;
+z-index: -90;
+
+}
+.Pagina1{
+    height: 1124px;
+    
+} 
+.pagina1 background-image{
+    animation:backInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 10s; /* don't forget to set a duration! */
+}
+.titulo{
+    height: 410px; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
 .T1{
     font-size: 60px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
 }
 .T2{
     color: rgba(0, 121, 214, 255);
     font-size: 60px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
 }
 .minibot{
     display: flex;
@@ -64,10 +99,8 @@ nav{
     height: 400px;
 }
 .Banim button{
-    position: relative;
     border:0ch;
-    z-index: index 100;
-    bottom:20px
+    z-index: index 100;    
 }
 #BaB{
     color: rgba(0, 121, 214, 255); 
@@ -79,6 +112,7 @@ nav{
     --fa-bounce-land-scale-x: 1; 
     --fa-bounce-land-scale-y: 1; 
     --fa-bounce-rebound: 0;
+    margin-left: 20px;
 }
 #BaF{
     color:white;
@@ -93,18 +127,619 @@ nav{
 }
 footer{
     background-color: rgba(255,253,146,255);
-    font-size: large; 
+    font-size: 15px; 
+    font-weight: 600;
     width: 100%;
-    height: 75px; 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    height: 320px; 
     color: rgb(33, 25, 34);
     margin-bottom: 0;
-    margin-top: -39px;
+    padding-top: 15px;
+} 
+@media screen and (max-width:400px){
+    .T1{
+        font-size: 40px;
+    }  
+    .T2{
+        font-size:40px ;
+    }   
 }
-.pagina2{
-    background-color:rgba(255,253,146,255) ;
-    width: 1900px;
-    height: 500px;
-    margin-top: 0%;
-    position: fixed;
+/* inicio de la pagina 2  */
+.Page2{
+    background-color:rgba(255,253,146,255);
+    width: 100%;
+    height: 1124px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.page2L{
+    position: absolute;
+    width: 50%;
+    margin-bottom: 300px;
+}
+.page2L img{
+    position: absolute;
+    cursor: pointer;
+    margin: 0px;
+    margin-bottom: 300px;
+}
+.p1{
+    top: -310px;
+    left: 540px;
+    height: 209px;
+    width: 175px;
+    border-radius: 40px; 
+}
+.p2{
+    top: -100px;
+    left: 260px;
+    height: 284px;
+    width: 253px;
+    border-radius: 40px;
+}
+.p3{
+    width: 164px;
+    height: 257px;
+    left: 540px;
+    top: 110px;
+    z-index: 110;
+    border-radius: 40px;
+} 
+.p4{
+    top: -210px;
+    left: 340px;
+    width: 301px;
+    height: 456px;
+    border-radius: 40px;
+    z-index: 120;
+}
+.cena{
+    z-index: 130;
+    position: absolute;
+    left: 300px;
+    top: -30px;
+    text-align: center;
+    width: 317px;
+    height: 103px;
+    border-radius: 50px;
+    border: 0ch;
+    cursor: pointer;
+}
+.Page2 ::placeholder{
+    color: rgba(110,15,60,255);
+    font-size: 20px;
+    font-weight: 800;   
+}
+#mg{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 330px;
+    z-index: 160;
+    color: black;
+}
+.page2R{
+    align-self: flex-end;
+    text-align: center;
+    color: rgba(194,24,82,255);
+    width: 50%;
+    margin-bottom: 300px;
+}
+.page2R h2{
+    font-weight: 700;
+    font-size: 60px;
+}
+.page2R p{
+font-size: 25px;
+}
+#B5{
+    background-color:rgba(194,24,82,255) ;
+    width: 95px;
+    height: 46px;
+    color:rgba(255,253,146,255);
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+}
+/* responsividad pagina 2 */
+@media screen and (max-width:1220px) {
+    .page2R{
+     display: none;
+    }  
+ }
+@media screen and (max-width:721px) {
+    .page2L{
+     display: none;
+    }  
+    .page2R{
+        display: block;
+        width: 90%;
+       margin: 10px;
+       text-align: center;
+       }  
+ }
+/* inicio de la pagina 3 parte izquierda */
+.Pagina3{
+    width: 100%;
+    height: 1124px;
+    background-color:rgba(219,255,247,255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.page3L{
+    text-align: center;
+    width: 50%;
+    color: rgba(0,107,108,255);
+}
+#B6{
+    background-color:rgba(0,107,108,255);
+    width: 95px;
+    height: 46px;
+    color:rgba(219,255,247,255);
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.page3L h2{
+    font-weight: 700;
+    font-size: 60px;
+}
+.page3L p{
+font-size: 25px;
+}
+/* parte derecha */
+.page3R{
+    width: 50%;
+    height: 900px;
+    margin-left: 20px;
+}
+.cama{
+    width: 100%;
+    height: 417px;
+    border-radius: 50px;  
+}
+#camas{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 80px;
+    position: relative;
+    background-color:rgba(219,255,247,255);
+    top: 150px;
+    width:44% ;
+    color: white;
+    display: flex;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./assets/img/tarjeta1.jpg);
+    height: 417px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#Futuro{
+    position: relative;
+    top: 120px;
+}
+#Futuro img{
+    width: 25%;
+    height: 126px;
+    border-radius: 30px;
+}
+#escandinavo{
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    bottom: 275px;
+    left: 480px;
+    border-radius: 50px;
+    width: 26%;
+    height: 250px;
+ 
+    border: 0ch;
+    border-radius: 50px;
+    cursor: pointer;
+    background-image: url(./assets/img/dormitorio\ escandinavo.jfif);
+}
+#dorEsc{
+    display: flex;
+    align-items: flex-end; 
+}
+#dorEsc h1{
+    font-size: 30px;
+    color: white; 
+}
+a{
+    text-decoration: none;
+}
+#deck{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    bottom: 230px;
+    left: 460px;
+    border-radius: 50px;
+    width: 18% ;
+    height: 173px;
+    color: white;
+    border: 0ch;
+    border-radius: 50px;
+    cursor: pointer;
+    background-image: url(./assets/img/deck.jfif);
+}
+#deO{
+    display: flex;
+    align-items: flex-end; 
+}
+#deO h3{
+    font-size: 20px;
+}
+#estilo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    bottom: 230px;
+    left: 160px;
+    border-radius: 50px;
+    width: 25% ;
+    height: 235px;
+    color: white;
+    border: 0ch;
+    border-radius: 50px;
+    cursor: pointer;
+    background-image: url(./assets/img/jugo.jfif);
+}
+#jugo{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; 
+}
+
+#baño{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    bottom: 420px;
+    left: 460px;
+    border-radius: 50px;
+    width: 25% ;
+    height: 235px;
+    color: white;
+    border: 0ch;
+    border-radius: 50px;
+    cursor: pointer;
+    background-image: url(./assets/img/tocador.jfif);
+}
+#bañot{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; 
+}
+/* pagina 4 mediaqueries */
+@media screen and (max-width:1313px){
+    #escandinavo{
+        left: 300px;
+       border-radius: 30px;
+    }
+    #deck{ 
+        left: 280px;
+        border-radius: 30px;
+    }
+    #estilo{
+     left: 10px;
+     border-radius: 30px;
+    }
+    #baño{
+        left: 280px;
+        border-radius: 30px;
+    }
+    #bañot h3{
+        font-size: 15px;
+    }
+    #dorEsc h1{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:830px){
+    .page3R{
+        display: none;
+    }
+   .page3L{
+    width: 100%;
+   }
+}
+/* estilos pagina 4 */
+.pagina4{
+    display: flex;
+   flex-direction: row;
+}
+.page4L {
+    display: flex;
+    background-image:url(./assets/img/maquillaje.jpg);
+    height: 1124px;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+.page4L{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 84px;
+    padding-top: 450px;
+}
+#P4{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 219px ;
+    height: 382px;
+    border: 0ch;
+    cursor: pointer;
+    background-image: url(./assets/img/mauillage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#P4circ{
+    border-radius: 100%;
+    width: 95px;
+    height: 95px;
+    border: 1px white solid;
+    position: relative;
+    top: 321px;
+    right: 32px;
+}
+#cardP4Text{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 140px;
+}
+#cardP4Text h3{
+    font-size: 24px;
+    font-weight: 400;
+}
+.subtext{
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin-left: 70px;
+}
+.page4R{
+    height: 1124px;
+    width: 50%;
+    background-color:rgba(254,226,234,255) ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(195,47,0,255);
+}
+#B7{
+    background-color:rgba(195,47,0,255);
+    width: 95px;
+    height: 46px;
+    color:rgba(254,226,234,255);
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.page4R h2{
+    font-weight: 700;
+    font-size: 60px;
+}
+.page4R p{
+font-size: 25px;
+}
+@media screen and (max-width:605px) {
+    .page4L{
+        display: none;
+    }
+    .page4R{
+        width: 100%;
+        text-align: center;
+        margin: 1px;
+    }
+}
+.pagina5{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./assets/img/fondo\ 2.PNG); 
+    height: 1124px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+.subpage5{
+    display: flex;
+    flex-direction: row;
+    height: 1050px;
+}
+.page5L{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    color: white;
+}
+.page5L h1{
+    font-size: 80px;
+    justify-content: center;
+
+}
+.page5R{
+    width: 50%;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+
+}
+.info{
+    background-color: white;
+    height: 850px;
+    width: 52%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 0px;   
+}
+.correo{
+    display: flex;
+    flex-direction: column;
+}
+.contraseña{
+    display: flex;
+    flex-direction: column;
+}
+.edad{
+    display: flex;
+    flex-direction: column;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 55%;
+}
+.inputs input{
+    border:  solid 1px grey ;
+    border-radius: 20px;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+.info h2{
+    text-align: center;
+}
+.info p{
+    font-size: 20px;
+    text-align: center;
+}
+.info img{
+    margin-right: 15px;
+    margin-left: 0px;
+}
+#B8{
+    color: rgb(33, 25, 34);
+    background-color: rgba(231, 8, 42, 255);
+    color: white;
+    border-radius: 150px;
+    width: 50%;
+}
+#B9{
+    background-color: rgba(25,118,242,255);
+    margin: 0;
+    border-radius: 50PX;
+    width: 50%;
+    height: 40px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+#B10{
+    background-color: white;
+    margin: 0;
+    border-radius: 50PX;
+    border: 1px solid black;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 15px;
+    height: 40px;
+}
+.condiciones P{
+    font-size:11px;
+  text-align: center;
+}
+.footerinfo{
+    background-color:rgba(233,233,233,255);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+   
+}
+.footerpage5{
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    z-index: 120;
+}
+.footerpage5 ul{
+    display: flex;
+    flex-direction: row;
+    list-style:none   
+}
+.footerpage5 li{
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    margin-right: 10px;
+    cursor: pointer;
+    list-style:none
+}
+@media screen and (max-width:1125px) {
+    .page5L{
+        display: none;
+    }
+    .page5R{
+        width: 100%;
+    }
+    .info{
+        width: 80%;
+    }
+    .cs{
+        display: flex;
+    }
+    .pv{
+        display: flex;
+    }
+    .ayu{
+        display: flex;
+    }
+    .ip{
+        display: none;
+    }
+    .and{
+        display: none;
+    }
+    .us{
+        display: none;
+    }
+    .col{
+        display: none;
+    }
+    .hoy{
+        display: none;
+    }
+    .ex{
+        display: none;
+    }
+    
+}
+#BaR{
+    margin-top: 75px;
+    color: rgba(157,3,66,255);
+}
+#Bag{
+    margin-top: 60px;
+    color: white;
 }
